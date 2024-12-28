@@ -1,0 +1,1 @@
+nsys profile --output=my_profile --force-overwrite true ./add_cuda && nsys stats my_profile.nsys-rep
