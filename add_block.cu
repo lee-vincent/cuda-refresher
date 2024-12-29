@@ -15,6 +15,12 @@ __global__ void add(int n, float *x, float *y)
 int main(void)
 {
     int N = 1 << 20;
+    std::cout << "N: " << N << std::endl;
+    int blockSize = 256;
+    std::cout << "blockSize: " << blockSize << std::endl;
+    int numBlocks = (N + blockSize - 1) / blockSize;
+    std::cout << "numBlocks: " << numBlocks << std::endl;
+
     float *x, *y;
 
     // Allocate Unified Memory – accessible from CPU or GPU
